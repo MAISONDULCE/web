@@ -1,0 +1,145 @@
+/* styles.css */
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link {
+  color: #ddd;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #8000ff;
+}
+
+/* Bienvenida con imagen de fondo */
+.welcome-section {
+  height: 350px;
+  background-image: url("https://i.pinimg.com/736x/65/de/21/65de2182ab4e5401a3bed8b0d5d306f1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* oscurecer la imagen */
+  z-index: 0;
+}
+
+.welcome-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.5rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* Productos y carrito */
+.card-header, .card-body {
+  background-color: #1f1f1f;
+}
+
+.list-group-item {
+  background-color: #1f1f1f;
+  border: none;
+  color: #fff;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #8000ff;
+  border-color: #8000ff;
+  color: #fff;
+}
+
+/* Alinear carrito con productos */
+@media (min-width: 768px) {
+  .product-section {
+    display: flex;
+    gap: 2rem;
+  }
+
+  #product-list {
+    flex: 3;
+  }
+
+  .cart-container {
+    flex: 1;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Footer */
+footer a {
+  font-size: 1.8rem;
+  margin: 0 0.6rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #8000ff;
+}
+
+/* Sección Sobre Nosotros - centrado y estilo imagen */
+#about {
+  text-align: center;
+}
+
+#about p {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+#about img {
+  margin-top: 1.5rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(128, 0, 255, 0.4);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  transition: transform 0.3s ease;
+  cursor: pointer; /* para que se note que es interactivo */
+}
+
+.card:hover {
+  transform: scale(1.05); /* agranda al 105% */
+  z-index: 10; /* para que quede por encima de otros elementos */
+}
